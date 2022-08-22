@@ -30,20 +30,18 @@ function agregarElementos(){
 } 
 agregarElementos();
 
-
 document.getElementById('select1').onchange = function() {
 
     /* Referencia a los input */
     var puestos = document.getElementById('input1');
-    var depto = document.getElementById('input8')
-    var depto2 = document.getElementById('input7');
+    var depto = document.getElementById('input10')
+    var depto2 = document.getElementById('input9');
   
     /* Asignamos cada dato a su input*/
     depto.value = this.value;
     depto2.value = this.value;
     puestos.value = departamentos[this.selectedIndex].diputados
   };
-
 
 function votosAleatorios (min, max){
     return Math.floor((Math.random() * (max - min + 1)) + min);
@@ -55,4 +53,5 @@ for ( var k = 0 ; k < 90; k++ ){
     var votos = votosAleatorios(1000,100000);
     votos_totales[k] = votos;
 }
+
 
