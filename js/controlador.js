@@ -36,12 +36,41 @@ document.getElementById('select1').onchange = function() {
     var puestos = document.getElementById('input1');
     var depto = document.getElementById('input10')
     var depto2 = document.getElementById('input9');
-  
+    var votosNac = document.getElementById('input3');
+    var votosL = document.getElementById('input4');
+    var votosLi = document.getElementById('input5')
+    var votosSal = document.getElementById('input6')
+    var votosInd = document.getElementById('input7')
+    var Total = document.getElementById('input8')
+
+    var dipN = document.getElementById("input11")
+    var dipL = document.getElementById("input12")
+    var dipLi = document.getElementById("input13")
+    var dipSal = document.getElementById("input14")
+    var dipInd = document.getElementById("input15")
+
     /* Asignamos cada dato a su input*/
     depto.value = this.value;
     depto2.value = this.value;
-    puestos.value = departamentos[this.selectedIndex].diputados
-  };
+    puestos.value = Number(departamentos[this.selectedIndex].diputados)
+    votosNac.value = Number(votos_totales[votosAleatorios(0,89)]),
+    votosL.value = votos_totales[votosAleatorios(0,89)],
+    votosLi.value = votos_totales[votosAleatorios(0,89)],
+    votosSal.value = votos_totales[votosAleatorios(0,89)],
+    votosInd.value = votos_totales[votosAleatorios(0,89)],
+    Total.value = (Number(votosNac.value)+ Number(votosL.value)+ Number(votosLi.value)  + Number(votosSal.value) + Number(votosInd.value))
+
+    cociente = Math.round(Total.value / puestos.value)
+
+    dipN.value = Math.round(votosNac.value / cociente);
+    dipL.value = Math.round(votosL.value / cociente);
+    dipLi.value = Math.round(votosLi.value / cociente);
+    dipSal.value = Math.round(votosSal.value / cociente);
+    dipInd.value = Math.round(votosDnd.value / cociente);
+
+
+
+};
 
 function votosAleatorios (min, max){
     return Math.floor((Math.random() * (max - min + 1)) + min);
@@ -50,8 +79,6 @@ function votosAleatorios (min, max){
 var votos_totales = []
 
 for ( var k = 0 ; k < 90; k++ ){     
-    var votos = votosAleatorios(1000,100000);
+    var votos = votosAleatorios(1000,25000);
     votos_totales[k] = votos;
 }
-
-

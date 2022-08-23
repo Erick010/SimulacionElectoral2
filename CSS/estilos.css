@@ -5,12 +5,17 @@ body{
 
 .main{
     justify-content: center;
-    width: 50%;
+    width:fit-content ;
 }
 
 .container{
     text-align: center;
     justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .title{
