@@ -66,10 +66,7 @@ document.getElementById('select1').onchange = function() {
     dipL.value = Math.round(votosL.value / cociente);
     dipLi.value = Math.round(votosLi.value / cociente);
     dipSal.value = Math.round(votosSal.value / cociente);
-    dipInd.value = Math.round(votosDnd.value / cociente);
-
-
-
+    dipInd.value = Math.round(votosInd.value / cociente);
 };
 
 function votosAleatorios (min, max){

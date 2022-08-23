@@ -54,6 +54,19 @@ body{
     border-radius: 10px 10px 0 0 ; 
 }
 
+input{
+    text-align: center;
+    width: 75px;
+}
+
+#input9, #input10{
+    width: 150px;
+}
+
+.texto{
+    width: 768px;;
+}
+
 @media only screen and (max-width:768px) {
     .card-body{
         flex-wrap: wrap;
